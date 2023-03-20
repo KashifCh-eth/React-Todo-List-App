@@ -1,0 +1,38 @@
+ body{
+    background-color: blueviolet;
+    text-align: center;
+   font-family: 'Josefin Sans', sans-serif;
+ }
+ .App{
+   margin-top: 200px;
+ }
+ .mini{
+    max-width: 700px;
+ }
+ .heading{
+    text-align: center;
+ }
+ input[type="text"]{
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid ;
+ 
+  
+   
+ }
+ input[type="text"]:focus{
+      background: transparent;
+      outline: none;
+  }
+  #todos{
+    border: none;
+    
+  }
+  button {
+    border: none;
+    background: transparent;
+  }
+  .formClass{
+    margin: 50px;
+  }
