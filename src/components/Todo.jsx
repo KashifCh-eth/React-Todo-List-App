@@ -2,16 +2,19 @@ import React from 'react'
 import { useState, useEffect } from "react"
 import {Trash3Fill , PencilSquare , PlusCircle } from "react-bootstrap-icons"
 
-const GetLocalTodo = () => {
-    let AllPrviousTodos = localStorage.getItem("list");
-    if (AllPrviousTodos) {
-        return JSON.parse(localStorage.getItem("list"));
-    }
-}
+// const GetLocalTodo = () => {
+//     let AllPrviousTodos = localStorage.getItem("list");
+//     if (AllPrviousTodos) {
+//         return JSON.parse(localStorage.getItem("list"));
+//     }
+// }
 
 function Todo() {
     const [input, setInput] = useState('');
-    const [todo, setTodo] = useState(GetLocalTodo());
+    const [todo, setTodo] = useState([
+        { id: Math.random(), name: "Check My Projects" },
+        {id: Math.random() , name : "Love You Ho Gaya❤"} 
+    ]);
     const [updateData, setUpdateData] = useState(null);
     const [IsToggle, setToggle] = useState(true);
 
@@ -59,9 +62,9 @@ function Todo() {
         setToggle(false);
     }
 
-    useEffect(() => {
-        localStorage.setItem("list", JSON.stringify(todo));  
-    },[todo])
+    // useEffect(() => {
+    //     localStorage.setItem("list", JSON.stringify(todo));  
+    // },[todo])
   return (
       <div>
           <form className=' formClass d-flex justify-content-center h2 '> 
